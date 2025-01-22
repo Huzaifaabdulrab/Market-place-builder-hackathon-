@@ -38,7 +38,7 @@ async function fetchData(): Promise<Car[]> {
 
 export default function CarCarts() {
   const [carData, setCarData] = useState<Car[]>([]); // State for storing car data
-  const [visibleCars, setVisibleCars] = useState(6); // State for visible car count (initial 6)
+  const [visibleCars] = useState(6); // State for visible car count (initial 6)
   const [error, setError] = useState<string | null>(null); // Error state
 
   // Fetch data and initialize AOS on component mount

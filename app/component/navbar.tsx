@@ -7,8 +7,6 @@ import { CiSearch } from "react-icons/ci";
 import filter from "../../public/images/filter.png";
 import { BiBell } from 'react-icons/bi';
 import { Inter } from 'next/font/google';
-import { useSelector } from 'react-redux';
-import { RootState } from '../redux/store';
 import Link from 'next/link';
 import { FiShoppingCart } from 'react-icons/fi';
 const inter = Inter({
