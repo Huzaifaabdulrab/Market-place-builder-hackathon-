@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export default function Navbar () {
-  const item = useSelector((state : RootState)=>state.cart)
+  // const item = useSelector((state : RootState)=>state.cart)
 
   return (
     <div id='navbar' className="w-full bg-white h-auto flex flex-col md:flex-row items-center justify-between p-4 md:p-8 border-b-2 border-b-[#e7eef6]">

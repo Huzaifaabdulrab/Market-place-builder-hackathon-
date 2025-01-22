@@ -5,7 +5,7 @@ import "./globals.css";
 import Navbar from "./component/navbar";
 import Footer from "./component/footer";
 import ReduxProvider from './component/provider';
-import store from "./redux/store";
+
 import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
