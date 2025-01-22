@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Data from "./component/page";
 import Screen from "./component/screen";
 // import Navbar from "./component/navbar";

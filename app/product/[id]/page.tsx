@@ -5,13 +5,10 @@ import { notFound } from "next/navigation";
 import Image from "next/image"; // Correct Image import for Next.js
 import Link from "next/link";
 import left1 from "../../../public/images/view1.png";
-import left2 from "../../../public/images/View 2.png";
 import left3 from "../../../public/images/View 3.png";
 import profile1 from "../../../public/images/Profill.png";
 import profile2 from "../../../public/images/Profill2.png";
-import Footer from "@/app/component/footer";
 import SideBar from "@/app/component/sidebar";
-import Data from "@/app/component/page";
 import CarCarts from "@/app/component/rentCarCats";
 
 interface Car {
@@ -124,7 +121,7 @@ export default async function BlogContent({ params }: { params: { id: string } }
                       <span className="text-[14px] text-gray-500">days</span>
                       <span>
                         <button className="w-[140px] h-[56px] lg:w-auto bg-blue-500 text-white text-[16px] font-medium px-6 py-3 rounded-2xl shadow hover:bg-blue-600 lg:ml-44">
-                          <a href="/payment"> Rent Now</a>
+                          <Link href="/payment"> Rent Now</Link>
                         </button>
                       </span>
                     </span>
