@@ -23,12 +23,12 @@ import { notFound } from "next/navigation";
 import { urlFor } from "@/sanity/lib/image";
 
 interface Car {
-  _id: string;
+  // _id: string;
   name: string;
   type: string;
-  fuelCapacity: string;
-  transmission: string;
-  seatingCapacity: string;
+  // fuelCapacity: string;
+  // transmission: string;
+  // seatingCapacity: string;
   pricePerDay: string;
   image: {
     asset: {
@@ -36,7 +36,7 @@ interface Car {
       _type: string;
     };
   };
-  originalPrice?: string;
+  // originalPrice?: string;
   tags?: string[];
 }
 
