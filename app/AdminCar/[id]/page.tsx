@@ -23,12 +23,9 @@ import { notFound } from "next/navigation";
 import { urlFor } from "@/sanity/lib/image";
 
 interface Car {
-  // _id: string;
+  
   name: string;
   type: string;
-  // fuelCapacity: string;
-  // transmission: string;
-  // seatingCapacity: string;
   pricePerDay: string;
   image: {
     asset: {
@@ -36,7 +33,6 @@ interface Car {
       _type: string;
     };
   };
-  // originalPrice?: string;
   tags?: string[];
 }
 
@@ -59,15 +55,10 @@ export default async function AdminCar({
   }
 
   const { 
-    // _id,
+  
     name ,
-    type,
-    // fuelCapacity,
-    // transmission,
-    // seatingCapacity,
-    pricePerDay,
+    type,    pricePerDay,
     image,
-    // originalPrice,
   } = car;
 
   const imageUrl = image?.asset?._ref
@@ -241,4 +232,3 @@ const obj=[
     </>
   );
 }
-// 394

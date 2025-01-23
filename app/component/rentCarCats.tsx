@@ -49,7 +49,7 @@ export default function CarCarts() {
         const cars = await fetchData();
         setCarData(cars);
       } catch (error) {
-        setError('Failed to fetch car data.');
+        setError('Failed to fetch car data.'+error);
       }
     };
 
