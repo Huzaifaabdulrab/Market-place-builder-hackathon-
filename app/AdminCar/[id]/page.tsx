@@ -59,15 +59,15 @@ export default async function AdminCar({
   }
 
   const { 
-    _id,
+    // _id,
     name ,
     type,
-    fuelCapacity,
-    transmission,
-    seatingCapacity,
+    // fuelCapacity,
+    // transmission,
+    // seatingCapacity,
     pricePerDay,
     image,
-    originalPrice,
+    // originalPrice,
   } = car;
 
   const imageUrl = image?.asset?._ref

@@ -26,23 +26,21 @@ interface Car {
       _type: string;
     };
   };
-  originalPrice?: string; // Optional field in case it's not always present
-  tags?: string[]; // Optional array for additional tags
+  originalPrice?: string; 
+  tags?: string[]; 
 }
 
-// Fetch car data from Sanity
+
 async function fetchData(): Promise<Car[]> {
   const data = await client.fetch(`*[_type == 'car']`);
   return data;
 }
 
 export default function CarCarts() {
-  const [carData, setCarData] = useState<Car[]>([]); // State for storing car data
-  const [visibleCars] = useState(6); // State for visible car count (initial 6)
-  const [error, setError] = useState<string | null>(null); // Error state
-
-  // Fetch data and initialize AOS on component mount
-  useEffect(() => {
+  const [carData, setCarData] = useState<Car[]>([]); 
+  const [visibleCars] = useState(6); 
+  const [error, setError] = useState<string | null>(null); 
+ useEffect(() => {
     AOS.init({ duration: 1000 });
     AOS.refresh();
 
@@ -50,7 +48,7 @@ export default function CarCarts() {
       try {
         const cars = await fetchData();
         setCarData(cars);
-      } catch (err) {
+      } catch (error) {
         setError('Failed to fetch car data.');
       }
     };

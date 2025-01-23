@@ -59,7 +59,7 @@ export default function Navbar () {
           <IoMdSettings className="w-[24px] h-[24px]" />
         </div>
         <div className="rounded-full overflow-hidden border border-[#C3D4E9]">
-          <a href="/AdminCar">
+          <Link href="/AdminCar">
           <div className=' p-2 w-[44px] h-[44px]  '>
           <SignedOut >
               <SignInButton />
@@ -69,7 +69,7 @@ export default function Navbar () {
             </SignedIn>
             </div>
 
-            </a>
+            </Link>
         </div>
       </div>
     </div>
