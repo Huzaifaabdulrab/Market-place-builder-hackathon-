@@ -81,7 +81,7 @@ export default function Data() {
   return (
     <div className="relative w-full min-h-screen p-6">
       {/* Header Section */}
-      <div className="flex gap-[50px] lg:justify-center items-center mb-8 lg:gap-[1079px]">
+      <div className="flex gap-12 lg:justify-center items-center mb-8 lg:gap-[1079px]">
         <p className="text-lg text-[#90A3BF] font-semibold">Popular Cars</p>
         <p className="text-sm text-blue-600 cursor-pointer hover:underline">
           <Link href="/categories">View All</Link>
@@ -96,7 +96,7 @@ export default function Data() {
           {carData.slice(0, visibleCars).map((car) => (
             <div
               key={car._id}
-              className="w-[304px] h-[408px] bg-white rounded-xl shadow-md p-4 flex flex-col"
+              className="w-full sm:w-[304px] md:w-[304px] lg:w-[304px] xl:w-[304px] h-[408px] bg-white rounded-xl shadow-md p-4 flex flex-col"
               data-aos="fade-up"
             >
               {/* Car Name and Type */}
@@ -119,7 +119,7 @@ export default function Data() {
                   alt={`${car.name} Image`}
                   width={232}
                   height={132}
-                  className="mx-auto mt-10"
+                  className="mx-auto mt-10 object-cover"
                 />
               </div>
 

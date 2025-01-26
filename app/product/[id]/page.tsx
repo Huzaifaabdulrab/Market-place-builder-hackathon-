@@ -74,6 +74,7 @@ export default async function CarContent({
                 <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2">
                   {/* Large Image */}
                   <div className="bg-white w-full h-auto lg:w-[492px] lg:h-[360px] mb-6 ml-4">
+                    
                     <Image
                       src={imageUrl}
                       alt={`${name} Image`}
@@ -152,26 +153,28 @@ export default async function CarContent({
                       {fuelCapacity}
                     </div>
                   </div>
+{/* Pricing and Button */}
+<div className="flex   items-start sm:items-center justify-between">
+  {/* Price Details */}
+  <div className="flex flex-col">
+    <span className="text-[20px] lg:text-[24px] font-bold text-gray-900">
+      {pricePerDay}
+    </span>
+    <p className="text-[18px]  text-gray-500 line-through">{originalPrice}</p>
+  </div>
 
-                  {/* Pricing and Button */}
-                  <div className="flex sm:flex-row items-start justify-between">
-                    <span>
-                      <span className="text-[20px] lg:text-[24px] font-bold text-gray-900">
-                        {pricePerDay}
-                      </span>
-                      <span className="text-[14px] text-gray-500"></span>
-                      <span>
-                        <button className="w-[140px] h-[56px] lg:w-auto bg-blue-500 text-white text-[16px] font-medium px-6 py-3 rounded-2xl shadow hover:bg-blue-600 lg:ml-44">
-                          <Link href={`/payment/${car._id}`}> Rent Now</Link>
-                        </button>
-                      </span>
-                    </span>
-                  </div>
-                  <p className="text-[18px] text-gray-500 line-through ml-2">
-                    {originalPrice}
-                  </p>
-                </div>
-              </div>
+  {/* Rent Now Button */}
+  <div className="mt-4 sm:mt-0 sm:ml-auto">
+    <Link href={`/payment/${car._id}`}>
+      <button className="w-full sm:w-auto h-[56px] bg-blue-500 text-white text-[16px] font-medium px-6 py-3 rounded-2xl shadow hover:bg-blue-600">
+        Rent Now
+      </button>
+    </Link>
+  </div>
+</div>
+</div>
+</div>
+
             </div>
 
             <div className="bg-white lg:w-[1016px] lg:h-auto w-[328px] ml-5 h-auto lg:ml-20 mt-[92px] rounded-lg shadow-md p-4 lg:p-10">

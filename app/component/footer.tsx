@@ -7,7 +7,7 @@ const poppins = Poppins({
 
 export default function Footer() {
   return (
-    <div className="w-full relative h-auto lg:bg-white flex flex-col items-center pt-10 sm:px-4">
+    <div className="w-[100%] relative h-auto lg:bg-white flex flex-col items-center pt-10 sm:px-4">
       {/* Top Section */}
       <div className="w-full flex flex-col sm:flex-row sm:justify-between items-center sm:items-start space-y-10 sm:space-y-0 sm:space-x-6">
         {/* Vision Section */}

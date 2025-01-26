@@ -30,7 +30,6 @@ interface Car {
   tags?: string[]; 
 }
 
-
 async function fetchData(): Promise<Car[]> {
   const data = await client.fetch(`*[_type == 'car']`);
   return data;
@@ -40,7 +39,8 @@ export default function CarCarts() {
   const [carData, setCarData] = useState<Car[]>([]); 
   const [visibleCars] = useState(6); 
   const [error, setError] = useState<string | null>(null); 
- useEffect(() => {
+
+  useEffect(() => {
     AOS.init({ duration: 1000 });
     AOS.refresh();
 
@@ -49,7 +49,7 @@ export default function CarCarts() {
         const cars = await fetchData();
         setCarData(cars);
       } catch (error) {
-        setError('Failed to fetch car data.'+error);
+        setError('Failed to fetch car data.' + error);
       }
     };
 
@@ -63,7 +63,7 @@ export default function CarCarts() {
   return (
     <div className="relative w-full min-h-screen p-6 mt-20">
       {/* Header Section */}
-      <div className="flex gap-[50px] lg:justify-center items-center mb-8 lg:gap-[1079px]">
+      <div className="flex gap-8 md:gap-20 lg:gap-[1079px] justify-between items-center mb-8">
         <p className="text-lg text-[#90A3BF] font-semibold">Popular Cars</p>
         <p className="text-sm text-blue-600 cursor-pointer hover:underline">
           <Link href="/categories">View All</Link>
@@ -71,11 +71,11 @@ export default function CarCarts() {
       </div>
 
       {/* Car Cards */}
-      <div className="flex flex-wrap gap-6 justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 justify-center">
         {carData.slice(0, visibleCars).map((car) => (
           <div
             key={car._id}
-            className="w-[304px] h-[408px] bg-white rounded-lg shadow-md p-4 flex flex-col"
+            className="w-full bg-white rounded-lg shadow-md p-4 flex flex-col"
             data-aos="fade-up"
           >
             {/* Car Name and Type */}
@@ -100,7 +100,7 @@ export default function CarCarts() {
             </div>
 
             {/* Car Specifications */}
-            <div className="flex justify-between mt-14">
+            <div className="flex justify-between mt-6 md:mt-8">
               <span className="flex items-center text-iconsCard gap-1 text-[14px] font-medium">
                 <BsFuelPumpFill className="w-[24px] h-[24px]" /> {car.fuelCapacity}
               </span>
@@ -127,7 +127,7 @@ export default function CarCarts() {
         ))}
       </div>
 
-      {/* Show More Button */}
+      {/* Show More Button (Optional) */}
     </div>
   );
 }
