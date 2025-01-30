@@ -63,7 +63,7 @@ export default function CarCarts() {
   return (
     <div className="relative w-full min-h-screen p-6 mt-20">
       {/* Header Section */}
-      <div className="flex gap-8 md:gap-20 lg:gap-[1079px] justify-between items-center mb-8">
+      <div className="flex gap-8 md:gap-20 lg:gap-[1006px] justify-betwen items-center mb-8 bg-black ">
         <p className="text-lg text-[#90A3BF] font-semibold">Popular Cars</p>
         <p className="text-sm text-blue-600 cursor-pointer hover:underline">
           <Link href="/categories">View All</Link>

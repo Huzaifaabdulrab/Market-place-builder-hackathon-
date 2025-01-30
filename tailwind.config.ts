@@ -27,15 +27,13 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       screens: {
-        xs: "360px", // Extra small devices
-        sm: "640px", // Small devices (landscape phones)
-        md: "768px", // Medium devices (tablets)
-        lg: "1024px", // Large devices (desktops)
-        xl: "1280px", // Extra large devices
-        "2xl": "1536px", // 2X extra large devices
-		'md-custom': '820px', // Custom breakpoint for 820px
-        'lg-custom': '1180px', // Custom breakpoint for 1180px
-     
+        'xs': '320px',
+        'sm': '480px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1440px',
+        '3xl': '1920px',
       },
     },
   },
