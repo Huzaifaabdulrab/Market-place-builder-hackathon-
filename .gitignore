@@ -42,23 +42,11 @@ next-env.d.ts
 .env.local
 index.ts
 
-# Ignore everything in the app folder
-/app/*
-
-# Except the admin folder inside app
-!/app/admin/
-
-# Ignore everything in the components folder
-/components/*
-
-# Except the navbar component
-!/components/navbar/
-
-# Ignore everything else
+# Ignore everything
 *
 
-# Except the layout.tsx file
-!/layout.tsx
+# Except the admin folder
+!/app/admin/
 
 # Except the .gitignore file itself
 !/.gitignore
