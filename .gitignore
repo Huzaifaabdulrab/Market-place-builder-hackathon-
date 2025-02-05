@@ -42,14 +42,41 @@ next-env.d.ts
 .env.local
 index.ts
 
-# Ignore everything in the app folder
-/app/*
 
-# Except the admin folder inside app
-!/app/admin/
-
-# Ignore everything else
-*
-
-# Except the .gitignore file itself
-!/.gitignore
+AdminCar/[id]
+remove extra calling
+2 weeks ago
+cart
+market place builder
+2 weeks ago
+component
+first commit
+7 minutes ago
+payment/[id]
+Add more functionality
+last week
+product/[id]
+Add more functionality
+last week
+redux
+market place builder
+2 weeks ago
+sign-in/[[...sign-in]]
+market place builder
+2 weeks ago
+sign-up/[[...sign-up]]
+market place builder
+2 weeks ago
+studio/[[...tool]]
+market place builder
+2 weeks ago
+favicon.ico
+market place builder
+2 weeks ago
+globals.css
+first commit
+7 minutes ago
+layout.tsx
+first commit
+7 minutes ago
+page.tsx
