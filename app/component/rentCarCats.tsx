@@ -63,7 +63,7 @@ export default function CarCarts() {
   return (
     <div className="relative w-full min-h-screen p-6 mt-20">
       {/* Header Section */}
-      <div className="flex gap-8 md:gap-20 lg:gap-[1006px] justify-betwen items-center mb-8 bg-black ">
+      <div className="flex gap-8 md:gap-20 lg:gap-[1006px] justify-betwen items-center mb-8">
         <p className="text-lg text-[#90A3BF] font-semibold">Popular Cars</p>
         <p className="text-sm text-blue-600 cursor-pointer hover:underline">
           <Link href="/categories">View All</Link>
@@ -71,14 +71,13 @@ export default function CarCarts() {
       </div>
 
       {/* Car Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 justify-center">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-[80%] gap-6 justify-center ml-auto mr-auto">
         {carData.slice(0, visibleCars).map((car) => (
           <div
             key={car._id}
             className="w-full bg-white rounded-lg shadow-md p-4 flex flex-col"
             data-aos="fade-up"
           >
-            {/* Car Name and Type */}
             <div className="flex justify-between items-center mb-4">
               <span className="text-lg font-bold w-full text-gray-800 flex flex-col">
                 {car.name}
@@ -95,7 +94,7 @@ export default function CarCarts() {
                 width={232}
                 height={132}
                 className="mx-auto mt-10"
-                priority // To optimize loading of images
+                priority 
               />
             </div>
 

@@ -12,7 +12,7 @@ import 'aos/dist/aos.css';
 import Link from 'next/link';
 import { useDispatch } from 'react-redux';
 import { add } from '../redux/cartslice'
-
+import Loading from "../loading"
 interface Car {
   _id: string;
   name: string;
@@ -57,7 +57,6 @@ export default function Data() {
   }, []);
 
   const handleAdd = (product: Car) => {
-    // Toggle heart color on click
     setHeartColors((prev) => ({
       ...prev,
       [product._id]: prev[product._id] === "gray" ? "red" : "gray",
@@ -90,7 +89,7 @@ export default function Data() {
 
       {/* Car Cards */}
       {carData.length === 0 ? (
-        <div>Loading cars...</div>
+        <div><Loading/></div>
       ) : (
         <div className="flex flex-wrap gap-6 justify-center">
           {carData.slice(0, visibleCars).map((car) => (
