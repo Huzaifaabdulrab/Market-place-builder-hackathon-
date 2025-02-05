@@ -42,11 +42,14 @@ next-env.d.ts
 .env.local
 index.ts
 
-# Ignore everything
-*
+# Ignore everything in the app folder
+/app/*
 
-# Except the admin folder
+# Except the admin folder inside app
 !/app/admin/
+
+# Ignore everything else
+*
 
 # Except the .gitignore file itself
 !/.gitignore
