@@ -41,14 +41,3 @@ yarn-error.log*
 next-env.d.ts
 .env.local
 index.ts
-
-
-AdminCar/[id]
-cart
-component
-payment/[id]
-product/[id]
-redux
-sign-in/[[...sign-in]]
-sign-up/[[...sign-up]]
-studio/[[...tool]]
