@@ -9,7 +9,7 @@ import { BiBell } from "react-icons/bi";
 import filter from "../../public/images/filter.png";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import { useUser } from "@clerk/nextjs";
+// import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -19,12 +19,11 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
-// ✅ Ensure environment variables are strings
 const storedEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL?.trim() || "";
 const storedPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD?.trim() || "";
 
 export default function Navbar() {
-  const { user } = useUser();
+  // const { user } = useUser();
   const route = useRouter();
   const [showForm, setShowForm] = useState(false);
   const [email, setEmail] = useState("");
