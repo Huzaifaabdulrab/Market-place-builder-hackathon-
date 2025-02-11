@@ -37,7 +37,7 @@ export default function SideBar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="flex ] lg:hidden p-2  left-3  border border-[#C3D4E9] rounded-full  absolute top-[8.9rem]  shadow-md">
+      <div className="flex ] lg:hidden p-2  left-12   border border-[#C3D4E9] rounded-full  absolute top-[7.9rem]   ">
         <FaBars onClick={toggleMenu}  className=" text-2xl cursor-pointer" />
       </div>
 

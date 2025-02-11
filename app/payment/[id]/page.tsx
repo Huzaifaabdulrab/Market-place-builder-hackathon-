@@ -61,7 +61,7 @@ export default async function CarContent({
 
     return (
     <>
-      <div className="w-auto   h:auto mt-[50px] lg:flex lg:flex-col">
+      <div className="w-auto  flex flex-wrap h:auto mt-[50px] lg:flex lg:flex-col">
         {/* Card Section */}
         <div className="card lg:w-[492px] h-[630px] w-[327px] p-5  mt-12 lg:h-[560px] lg:mt-[36px] lg:ml-[1000px] bg-white ml-4 rounded-[10px] mb-[30px] sm:ml-0 sm:w-full sm:h-auto ">
           {/* Header Section */}
